@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+
+{% block head_title %}¡{{ pagina.titulo }}!{% endblock %}
+
+{% block content %}
+<div class="pag-content">
+<div class="pag-img col-sm-4"><img src="{{ static_media_url }}{{ pagina.imagen}}" width="300px"></div>
+<div class="pag-text col-sm-6">{{ pagina.cuerpo| safe }}</div>
+</div>
+{% endblock %}

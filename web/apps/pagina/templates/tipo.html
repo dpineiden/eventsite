@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% block head_title %}San José Home Care |  Tipo: {{ clase.tipo }} {% endblock %}
+
+{% block content%}
+
+<p><b>
+{{ clase.descripcion }}
+</b></p>
+
+
+{% for pagina in paginas  %}
+	<div class="list-tipos">
+		<ul>
+			<li class="item-tipos">
+			    <h4>{{ pagina.titulo }}</h4>
+			    <a href="/pagina/{{pagina.slug_titulo}}">
+			    	<img src=/media/{{ static_media_url }}{{ pagina.imagen }} width="300px" height="auto" alt={{ pagina.resumen }} >
+			    </a>
+		    </li>
+	   </ul>
+   </div>  
+{% endfor %}
+
+{% endblock %}
