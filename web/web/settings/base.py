@@ -68,9 +68,13 @@ INSTALLED_APPS = [
     "compressor",
     #jango imagekit
     'imagekit',
+    #phonenumberfield
+    'phonenumber_field',
     #APPSS
     'contactform',
-    'pagina'
+    'pagina',
+    'actividad',
+    'participante'
 ]
 
 MIDDLEWARE = [
@@ -285,3 +289,5 @@ AUTH_PASSWORD_VALIDATORS=[
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
